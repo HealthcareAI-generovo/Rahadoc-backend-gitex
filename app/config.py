@@ -35,8 +35,14 @@ class Settings(BaseSettings):
     OLLAMA_MODEL: str = "mistral"
     LOCAL_WHISPER_URL: str | None = None
 
-    # CORS
-    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:3001"]
+    # CORS — stored as comma-separated string to avoid pydantic-settings JSON parsing issues
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:3001"
+
+    @property
+    def allowed_origins_list(self) -> List[str]:
+        if not self.ALLOWED_ORIGINS or not self.ALLOWED_ORIGINS.strip():
+            return ["http://localhost:3000", "http://localhost:3001"]
+        return [o.strip().rstrip("/") for o in self.ALLOWED_ORIGINS.split(",") if o.strip()]
 
     # Environment
     DEBUG: bool = False
