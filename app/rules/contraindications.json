@@ -1,0 +1,76 @@
+{
+  "age_restrictions": [
+    {
+      "dci": "aspirine",
+      "min_age": 16,
+      "max_age": null,
+      "reason": "Risque de syndrome de Reye chez l'enfant",
+      "severity": "RED"
+    },
+    {
+      "dci": "ibuprofene",
+      "min_age": null,
+      "max_age": 70,
+      "reason": "Risque accru d'effets indésirables cardiovasculaires et digestifs chez le sujet âgé",
+      "severity": "YELLOW",
+      "recommendation": "À utiliser à dose minimale efficace et sur la durée la plus courte possible"
+    },
+    {
+      "dci": "metformine",
+      "min_age": null,
+      "max_age": 80,
+      "reason": "Risque d'acidose lactique augmenté avec l'âge",
+      "severity": "YELLOW",
+      "recommendation": "Surveillance fonction rénale rapprochée"
+    }
+  ],
+  "pregnancy_contraindications": [
+    {
+      "dci": "misoprostol",
+      "category": "X",
+      "severity": "RED",
+      "reason": "Contre-indication absolue pendant la grossesse - risque tératogène"
+    },
+    {
+      "dci": "enalapril",
+      "category": "D",
+      "severity": "RED",
+      "reason": "Contre-indication à partir du 2ème trimestre - toxicité fœtale et néonatale"
+    },
+    {
+      "dci": "warfarine",
+      "category": "X",
+      "severity": "RED",
+      "reason": "Contre-indication pendant la grossesse - risque tératogène et hémorragique"
+    },
+    {
+      "class": "IEC",
+      "category": "D",
+      "severity": "RED",
+      "reason": "Contre-indication à partir du 2ème trimestre de grossesse"
+    }
+  ],
+  "renal_adjustments": [
+    {
+      "dci": "metformine",
+      "condition": "clearance_creatinine < 30",
+      "severity": "RED",
+      "reason": "Contre-indication si clairance < 30 ml/min - risque d'acidose lactique"
+    },
+    {
+      "dci": "spironolactone",
+      "condition": "insuffisance_renale",
+      "severity": "YELLOW",
+      "reason": "Risque d'hyperkaliémie - surveillance ionogramme nécessaire"
+    }
+  ],
+  "hepatic_contraindications": [
+    {
+      "dci": "paracetamol",
+      "condition": "insuffisance_hepatique_severe",
+      "severity": "RED",
+      "reason": "Contre-indication en insuffisance hépatocellulaire sévère",
+      "max_dose_daily": "2g si insuffisance modérée"
+    }
+  ]
+}

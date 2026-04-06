@@ -1,0 +1,46 @@
+{
+  "interactions": [
+    {
+      "drug1_dci": "warfarine",
+      "drug2_dci": "aspirine",
+      "severity": "MAJOR",
+      "description": "Risque hémorragique majeur - augmentation de l'effet anticoagulant",
+      "recommendation": "Éviter l'association. Si nécessaire, surveillance INR rapprochée et ajustement des doses."
+    },
+    {
+      "drug1_dci": "metformine",
+      "drug2_dci": "produit de contraste iodé",
+      "severity": "MAJOR",
+      "description": "Risque d'acidose lactique",
+      "recommendation": "Arrêter la metformine 48h avant l'examen et ne reprendre qu'après contrôle de la fonction rénale."
+    },
+    {
+      "drug1_dci": "enalapril",
+      "drug2_dci": "spironolactone",
+      "severity": "MODERATE",
+      "description": "Risque d'hyperkaliémie",
+      "recommendation": "Surveillance ionogramme sanguin régulière (K+)."
+    },
+    {
+      "drug1_dci": "simvastatine",
+      "drug2_dci": "amiodarone",
+      "severity": "MODERATE",
+      "description": "Risque accru de rhabdomyolyse",
+      "recommendation": "Ne pas dépasser simvastatine 20mg/jour. Surveillance clinique (douleurs musculaires) et CPK."
+    },
+    {
+      "drug1_class": "AINS",
+      "drug2_class": "IEC",
+      "severity": "MODERATE",
+      "description": "Diminution de l'effet antihypertenseur, risque d'insuffisance rénale aiguë",
+      "recommendation": "Surveillance TA et fonction rénale. Privilégier paracétamol pour l'antalgie."
+    },
+    {
+      "drug1_class": "AINS",
+      "drug2_class": "AINS",
+      "severity": "MAJOR",
+      "description": "Duplication - risque hémorragique digestif et rénal majeur",
+      "recommendation": "Ne jamais associer 2 AINS. Choisir un seul AINS à dose efficace."
+    }
+  ]
+}
